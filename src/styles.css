@@ -1,0 +1,27 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    /* background-color: black; */
+    display: flex;
+    flex-direction: column;
+
+}
+.nav{
+    width: 100vw;
+    height: 15vh;
+    /* background-color: red; */
+}
+.main{
+    width: 100vw;
+    height: 70vh;
+    /* background-color: blue; */
+}
+.footer{
+    width: 100vw;
+    height: 15vh;
+    /* background-color: yellow; */
+}
