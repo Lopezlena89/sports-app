@@ -17,7 +17,7 @@ export const Navbar = () => {
                 className='futbol'
                 to="/futbol"
             >
-                <span>Futbol</span>
+                <span >Futbol</span>
             </NavLink>
 
             <NavLink 
@@ -44,16 +44,16 @@ export const Navbar = () => {
             >
                 <span>Tenis</span>
             </NavLink>
-            <NavLink 
-                className='noticias'
-                to="/noticias"
-            >
-                <span>Noticias  </span>
-            </NavLink>
+            
             
             <input type="text" />
             <span>Luis Mariano</span>
-            <img className="usuario" src="" alt="" />
+            <NavLink 
+                className='login'
+                to="/login"
+            >
+                <img className="usuario" />
+            </NavLink>
             
 
         </nav>

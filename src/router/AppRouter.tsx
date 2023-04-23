@@ -1,8 +1,7 @@
-import React from 'react'
-import { Navigate, Route, Routes } from 'react-router-dom'
-import { BaseballPage,BasketballPage,FutbolAmericanoPage,
-        FutbolPage,Noticias,Tenis,MainPage } from '../sports/pages';
 import { LoginPage } from '../auth/pages/LoginPage';
+import { Navbar } from '../ui/components/navbar';
+import { SportsRoutes } from '../sports/routes/SportsRoutes';
+import { Route, Routes } from 'react-router-dom';
 
 
 
@@ -10,16 +9,10 @@ export const AppRouter = () => {
   return (
     <>
         <Routes>
-            <Route path='/' element={<MainPage/>}/>
-            <Route path='futbol' element={<FutbolPage/>}/>
-            <Route path='basketball' element={<BasketballPage/>}/>
-            <Route path='futAmericano' element={<FutbolAmericanoPage/>}/>
-            <Route path='baseball' element={<BaseballPage/>}/>
-            <Route path='tenis' element={<Tenis/>}/>
-            <Route path='noticias' element={<Noticias/>}/>
 
             <Route path='login' element={<LoginPage/>}/>
-            <Route path='/*' element={<Navigate to='/futbol'/>}/>
+            <Route path='/*' element={<SportsRoutes/>}/>
+            
            
         </Routes>
     </>
