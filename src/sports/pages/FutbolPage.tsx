@@ -1,7 +1,10 @@
+import { Navbar } from "../../ui/components/navbar"
 
 
 export const FutbolPage = () => {
   return (
-    <h1>FutbolPage</h1>
+    <>
+      <div>Futbol</div>
+    </>
   )
 }
