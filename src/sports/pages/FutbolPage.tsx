@@ -1,10 +1,15 @@
-import { Navbar } from "../../ui/components/navbar"
+import { MainSports } from "../../ui/components/MainSports"
+
 
 
 export const FutbolPage = () => {
+    
+
   return (
     <>
-      <div>Futbol</div>
+      <div className="main">
+          <MainSports/>
+      </div>
     </>
   )
 }

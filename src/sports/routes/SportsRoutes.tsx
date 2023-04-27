@@ -5,13 +5,12 @@ import { MainPage,FutbolPage,BasketballPage,FutbolAmericanoPage,BaseballPage,Ten
 
 
 export const SportsRoutes = () => {
+  
   return (
    <>
 
       <Navbar/>
-      <div className="sports-routes">
-
-      
+      <div className="sports-routes">      
         <Routes>
             <Route path='/' element={<MainPage/>}/>
             <Route path='futbol' element={<FutbolPage/>}/>

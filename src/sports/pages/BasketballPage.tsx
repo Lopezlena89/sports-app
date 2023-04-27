@@ -1,7 +1,12 @@
+import { MainSports } from "../../ui/components/MainSports"
 
 
 export const BasketballPage = () => {
   return (
-    <h1>BasketballPage</h1>
-  )
+    <>
+      <div className="main">
+          <MainSports/>
+      </div>
+    </>
+  ) 
 }
