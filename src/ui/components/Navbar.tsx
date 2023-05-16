@@ -1,11 +1,21 @@
-
+import logo from '../../assets/nba-logo.png'
 export const Navbar = () => {
+
+  
+
   return (
     <>
       <div className="container-nav">
         <div className="team">
           
-          <img className="imagen" src="logo" alt="NBA" />
+        <div className="imagen">
+          <img 
+            src={logo}
+            alt='nba'
+            className='imagen'
+           
+          />
+        </div>
           
           <div>
             Basketball
