@@ -1,2 +1,2 @@
 export * from './MainPages';
-export * from './TeamPages'
+export * from './TeamPages';
