@@ -21,8 +21,14 @@ const router = createBrowserRouter([
         element:<MainPages/>
       },
       {
-        path:'/team:teamId',
+        path:'team/:teamId',
         element:<TeamPages/>
+      },
+      {
+        path: "/",
+        element: 
+         <Navigate to='/main'/>
+        ,
       },
     ]
   },
