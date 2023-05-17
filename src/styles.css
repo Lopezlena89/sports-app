@@ -10,6 +10,7 @@
     background-color: #424242;
     color:#A7A7A7;
     font-size: small;
+    height: 8vh;
 }
 .team, .usuario{
     display: flex;
@@ -55,14 +56,29 @@
    
 }
 .search-bar button{
-    background-color: transparent;
+    background: transparent;
     border: 0;
-    width: 30px;
-    height:30px;
+    
 }
 .search-bar button img{
     background: transparent;
     position: relative;
     right: 10px;
     top:2px
+}
+.container-main{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    height: 88vh;
+    width: 98vw;
+   
+}
+.container-main .teams{
+   display: flex;
+   flex-wrap: wrap;
+    
+}
+.teams img{
+    margin: 10px;
 }

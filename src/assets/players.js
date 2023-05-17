@@ -1,4 +1,4 @@
-[
+export const players=[
     {
       "firstName": "Precious",
       "lastName": "Achiuwa",
