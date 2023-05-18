@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+   
 }
 .container-nav{
     display: flex;
@@ -74,13 +75,43 @@
     margin: 10px;
     height: 88vh;
     width: 98vw;
+    
    
 }
 .container-main .teams{
    display: flex;
    flex-wrap: wrap;
-    
+   
 }
 .teams img{
     margin: 10px;
+    width: 100px;
+    height: 100px;
+    
+}
+.mainpage-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+.mainpage-container .img-team{
+    width: 30%;
+    height: 30%;
+    margin: 3%;
+}
+.img-players{
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+}
+.img-team{
+ width: 100px;
+ height: 100px;
+}
+.teamCard-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }

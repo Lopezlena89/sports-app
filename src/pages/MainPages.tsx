@@ -8,7 +8,9 @@ export const MainPages = () => {
   return (
     <>
         <div className='container-main'>
+        
           <div className='teams'>
+             
               {
                 teams.map(team=>(
                   

@@ -1,7 +1,15 @@
 
 
-export const PlayersCard = () => {
+export const PlayersCard = ({player}) => {
   return (
-    <div>PlayersCard</div>
+   <>
+    
+
+    {
+        <li>
+            {`${player.firstName} ${player.lastName}`}
+        </li>
+    }
+   </>
   )
 }
