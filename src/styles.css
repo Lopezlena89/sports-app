@@ -21,6 +21,8 @@
 }
 .team *{
     margin-left: 3% ;
+    color:#A7A7A7;
+    text-decoration: none;
 }
 .team{
     justify-content: flex-start;
