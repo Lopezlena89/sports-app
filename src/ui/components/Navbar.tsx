@@ -1,28 +1,38 @@
-import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import logo from '../../assets/nba-logo.png'
 import search  from '../../assets/search.png';
-import queryString from 'query-string';
 import { getTeamByName } from '../../helpers/getTeamId';
 import { useForm } from '../../hooks/useForm';
+import { useState } from 'react';
 
 
 
 export const Navbar = () => {
 
+  const navigate = useNavigate();
 
-    const navigate = useNavigate();
-
-    const {searchText,onInputChange,onResetForm} = useForm({
-      searchText:''
-    });
+  const {searchText,onInputChange,onResetForm} = useForm({
+    searchText:''
+  });
+  
+  const nuevaProm = async() =>{
     
-    const {teamName} = getTeamByName(searchText)
-    console.log(teamName)
-
-    const onSubmit = (e) =>{
-        e.preventDefault();
-        navigate(`team/${teamName}`)
+    try {
+      const {teamName} = await getTeamByName(searchText);
+    
+      navigate(`/team/${teamName}`);
+    } catch (error) {
+        console.log(error)
+        alert('Anotar un nombre valido');
     }
+    
+  }
+  
+  const onSubmit = (e) =>{
+      e.preventDefault();
+      nuevaProm();
+      onResetForm()
+  }
   
 
   return (

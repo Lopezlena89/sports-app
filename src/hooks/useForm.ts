@@ -15,7 +15,7 @@ export const useForm = (initialState = {}) => {
 
     }
 
-    const resetInput = () =>{
+    const onResetForm = () =>{
         setUseForm(initialState);
     }
   
@@ -24,6 +24,6 @@ export const useForm = (initialState = {}) => {
         ...useForm,
         useForm,
         onInputChange,
-        resetInput
+        onResetForm
   }
 }

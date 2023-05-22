@@ -1,7 +1,8 @@
 *{
     margin: 0;
     padding: 0;
-   
+    font-family: 'Instrument Sans', sans-serif;
+    
 }
 .container-nav{
     display: flex;
@@ -44,7 +45,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    border-radius: 40px 40px 40px 40px;
+    border-radius: 40px;
     background:white;
    
 }
@@ -115,3 +116,87 @@
     align-items: center;
     justify-content: center;
 }
+.container-init{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: #162652;
+   
+}
+.caja-init{
+    width: 450px;
+    height: auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10%;
+    background-color: white;
+    
+    
+}
+.caja-init{
+    margin-top: 20px;
+    font-size: larger;
+    font-weight: bolder;
+}
+.caja-init *{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 40px;
+    font-size: 15px;
+    margin-bottom: 5%;
+    font-family: 'Instrument Sans', sans-serif;
+}
+.caja-init div input{
+    height: 50px;
+    padding: 10px;
+}
+.caja-init .login-cuenta{
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-around;
+}
+
+.login-cuenta button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border:0;
+    width: 35%;
+    color:white;
+    background: #162652;
+    margin-bottom: 0px;
+}
+.link{
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-right: 30px;
+}
+.crear-cuenta button{
+    width: 95%;
+    padding: 20px;
+    border:0;
+    background: #162652;
+    color:white;
+    align-items: center;
+}
+.existe {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.existe *{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
