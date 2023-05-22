@@ -5,7 +5,7 @@ export const RegisterPage = () => {
     <>
         <div className="container-init">
             <div className="caja-init">
-              <span>Crear Cuenta</span>
+              <span className="span">Crear Cuenta</span>
               <div className="nombre">
                 <input type="text" placeholder="nombre completo"/>
               </div>

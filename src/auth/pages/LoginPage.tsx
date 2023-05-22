@@ -9,7 +9,7 @@ export const LoginPage = () => {
     <>
       <div className="container-init">
         <div className="caja-init">
-            <span>Login</span>
+            <span className="span">Login</span>
             <div className="correo" >
               <input type="email" placeholder="email" />
             </div>
