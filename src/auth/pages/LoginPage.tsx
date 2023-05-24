@@ -1,3 +1,5 @@
+import { useMemo } from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom"
 import { useForm } from "../../hooks/useForm";
 import { starGoogleSignIn, startLoginWithEmailPassword } from "../../store/auth/thunks";
@@ -12,6 +14,11 @@ const formData = {
 export const LoginPage = () => {
 
   const {formState,onInputChange,email,password} = useForm(formData)
+
+  const {status,errorMessage} = useSelector(state=>state.auth)
+
+  const isAuthenticated = useMemo(()=>status === 'checking',[status])
+  
 
   const dispatch = useAppDispatch();
 
@@ -49,19 +56,28 @@ export const LoginPage = () => {
                   onChange={onInputChange}
                 />
               </div>
+              {
+                (errorMessage)
+                ?
+                <div className="error"><span>{errorMessage}</span></div>
+                :''
+              }
               <div  className="login-cuenta">
-                <button type="submit">
+                <button disabled={isAuthenticated} type="submit" >
                     Login
                 </button>
-                <button onClick={onGoogleSignIn}>
+                <button disabled={isAuthenticated} onClick={onGoogleSignIn}>
                     Google
                 </button>
               </div>
             </form>
             
-            <Link className="link"  to="/register">
-                Crear cuenta
-            </Link>
+           <div className="link">
+             
+              <Link className="link"  to="/register">
+                  Crear cuenta
+              </Link>
+           </div>
             
         </div>  
       </div>

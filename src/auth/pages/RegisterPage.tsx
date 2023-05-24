@@ -1,3 +1,4 @@
+import { useSelector } from "react-redux"
 import { Link } from "react-router-dom"
 import { useForm } from "../../hooks/useForm"
 import { startCreatingUserWithEmailPassword } from "../../store/auth/thunks"
@@ -12,6 +13,7 @@ const formData = {
 
 export const RegisterPage = () => {
   const dispatch = useAppDispatch();
+  const {errorMessage} =useSelector(state=>state.auth)
 
   const {formState,displayName,email,password,onInputChange,onResetForm} =useForm(formData)
 
@@ -23,9 +25,9 @@ export const RegisterPage = () => {
   return (
     <>
         <div className="container-init">
-            <div className="caja-init">
-              <span className="span">Crear Cuenta</span>
-              <div className="nombre">
+            <div className="register-caja-init">
+              <span className="register-span">Crear Cuenta</span>
+              <div className="register-nombre">
                 <input 
                   type="text" 
                   placeholder="nombre completo"
@@ -34,7 +36,7 @@ export const RegisterPage = () => {
                   onChange={onInputChange}
                   />
               </div>
-              <div className="correo">
+              <div className="register-correo">
                   <input 
                     type="email" 
                     placeholder="correo" 
@@ -43,7 +45,7 @@ export const RegisterPage = () => {
                     onChange={onInputChange}
                   />
               </div>
-              <div className="password"> 
+              <div className="register-password"> 
                   <input 
                     type="password" 
                     placeholder="password"
@@ -52,10 +54,17 @@ export const RegisterPage = () => {
                     onChange={onInputChange}
                   />
               </div>
-              <form onSubmit={onSubmit} className="crear-cuenta">
+              {
+                (errorMessage)
+                ?
+                <div className="error"><span>{errorMessage}</span></div>
+                :''
+              }
+              <form onSubmit={onSubmit} className="register-crear-cuenta">
                 <button>Crear cuenta</button>
               </form>
-              <div className="existe">
+              <div className="register-existe">
+                
                 <span>Ya tienes cuenta?</span>
                 <Link className="link-register"  to="/login">
                   Ingresar
