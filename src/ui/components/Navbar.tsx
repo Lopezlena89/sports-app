@@ -3,17 +3,26 @@ import logo from '../../assets/nba-logo.png'
 import search  from '../../assets/search.png';
 import { getTeamByName } from '../../helpers/getTeamId';
 import { useForm } from '../../hooks/useForm';
-import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { startLogout } from '../../store/auth/thunks';
 
 
 
 export const Navbar = () => {
 
+  const  {displayName,photoURL} =useSelector(state=>state.auth);
+  
+
   const navigate = useNavigate();
+  const dispatch = useDispatch()
 
   const {searchText,onInputChange,onResetForm} = useForm({
     searchText:''
   });
+  const onLogOut = ()=>{
+    dispatch(startLogout());
+        
+}
   
   const nuevaProm = async() =>{
     
@@ -69,9 +78,16 @@ export const Navbar = () => {
         </div>
         <div className="usuario">
           <div>
-            Luis Mariano
+            {displayName}
           </div>
-          <img src="" alt="Photo" />
+          {
+            (photoURL)
+            ?<img className='imagen-google' src={photoURL} alt="Photo" />
+            :''
+          }
+          <button className='navbar-button' onClick={onLogOut}>
+            Logout
+          </button>
         </div>
       </div>
     </>
