@@ -247,6 +247,20 @@ div .error {
 .register-caja-init .error{
     width: 75%;
 }
+.span-valid{
+    color:#5b5b5b;
+    font-size: 12px;
+    margin-left: 20px;
+}
+.span-valid-malo{
+    color:red;
+    font-size: 12px;
+    margin-left: 20px;
+}
+.validacion-span{
+    margin-left: 30px;
+}
+
 
 
 
